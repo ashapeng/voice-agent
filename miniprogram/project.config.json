@@ -1,0 +1,15 @@
+{
+  "description": "项目配置文件",
+  "setting": {
+    "urlCheck": true,
+    "es6": true,
+    "postcss": true,
+    "minified": true,
+    "newFeature": true
+  },
+  "compileType": "miniprogram",
+  "libVersion": "2.25.2",
+  "appid": "your-appid",
+  "projectname": "voice-agent-miniprogram",
+  "condition": {}
+}

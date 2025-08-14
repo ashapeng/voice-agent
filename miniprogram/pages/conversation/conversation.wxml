@@ -1,0 +1,19 @@
+<view class="container">
+  <!-- 消息列表 -->
+  <view wx:for="{{messages}}" wx:key="index" class="message">
+    <text>{{item.content}}</text>
+    <view class="analysis" wx:if="{{item.analysis}}">
+      <text>情绪: {{item.analysis.mood}}</text>
+      <text>语气: {{item.analysis.tone}}</text>
+      <text>建议回复: {{item.analysis.suggestion}}</text>
+    </view>
+  </view>
+  
+  <!-- 当前分析结果 -->
+  <view class="current-analysis" wx:if="{{currentAnalysis}}">
+    <text>最新分析结果:</text>
+    <text>情绪: {{currentAnalysis.mood}}</text>
+    <text>语气: {{currentAnalysis.tone}}</text>
+    <text>建议回复: {{currentAnalysis.suggestion}}</text>
+  </view>
+</view>

@@ -22,12 +22,38 @@
 - **深度学习**：PyTorch
 - **依赖管理**：Python 3.x
 
+# 智能对话分析助手（微信小程序版）
+
+## 技术栈
+- **前端**：微信小程序原生开发
+- **后端**：Flask（提供 `/api/analyze` 接口）
+- **核心分析模块**：Python（情绪、意图分析和响应建议）
+
 ## 项目结构
-- `app.py`：主入口文件，提供 Web 服务。
-- `modules/analyze.py`：核心分析模块，实现情绪、意图分析和响应建议。
-- `requirements.txt`：项目依赖包列表。
-- `templates/`：存放前端页面（如 `voice_agent.html`）。
-- `static/`：存放静态资源（如 CSS、JS 文件）。
+```
+voice-agent/
+├── app.py                  # 后端API服务入口（仅提供 `/api/analyze` 接口）
+├── modules/
+│   └── analyze.py          # 核心分析模块
+├── requirements.txt        # 项目依赖包列表
+└── miniprogram/            # 微信小程序源代码
+    ├── app.js              # 小程序入口文件
+    ├── pages/              # 小程序页面
+    │   └── conversation/   # 对话分析页
+    └── utils/              # 工具模块（如分析逻辑）
+```
+
+## 使用方法
+1. **后端服务**：
+   - 安装依赖：`pip install -r requirements.txt`
+   - 启动服务：`python app.py`
+2. **微信小程序**：
+   - 在微信开发者工具中导入 `miniprogram/` 目录
+   - 配置合法域名（指向后端API）
+   - 编译并测试功能
+
+## 注意事项
+- 本项目已移除所有网页版相关内容，仅支持微信小程序。
 
 ## 使用方法
 1. 安装依赖：
